@@ -1,0 +1,35 @@
+ion-segment-button {
+    min-width: 70px;
+  }
+  
+  ion-slides,
+  ion-slide {
+    height: 50%;
+
+  }
+  
+  .slide-1 {
+    background: #e0bbe4;
+  }
+  
+  .slide-2 {
+    background: #957dad;
+    color: #fff;
+  }
+  
+  .slide-3 {
+    background: #ffdfd3;
+  }
+  
+  ion-segment-button{
+    --indicator-box-shadow: transparent!important;
+    border-radius: 2.5rem !important;
+    //padding: 0.7rem;
+    margin: 5;
+    --background:rgb(5, 38, 59);                                                                                                                                                      
+    --color:#0974cc;
+    --background-checked: linear-gradient(to right, #64052a, #0083CB)!important;
+    --color-checked: rgb(106, 178, 219);
+    --indicator-color : transparent!important; /* this solution */
+
+    }

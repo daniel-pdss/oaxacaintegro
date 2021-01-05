@@ -1,0 +1,124 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Denuncia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <label for="">Datos de tu denuncia</label>
+    <!-- Default Input -->
+<ion-card>
+  <ion-card>
+    <label>Hora y fecha del acontecimiento</label>
+  <ion-item>
+    <ion-label position="floating">Hora: </ion-label>
+    <ion-datetime displayFormat="h:mm A"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Fecha: </ion-label>
+    <ion-datetime displayFormat="DD MMM, YYYY"  monthShortNames="Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre" display-timezone="utc" ></ion-datetime>
+  </ion-item>
+  </ion-card>
+    
+  <ion-label>Sexo: </ion-label>
+<ion-segment (ionChange)="segmentChanged($event)" value="">
+  <ion-segment-button value="hombre" >
+    <ion-label >Hombre</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="mujer">
+    <ion-label >Mujer</ion-label>
+  </ion-segment-button>
+</ion-segment>
+<!-- Default Segment -->
+<ion-label>Tipo: </ion-label>
+<ion-segment (ionChange)="segmentChanged($event)">
+  <ion-segment-button value="queja">
+    <ion-label >Queja</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="denuncia">
+    <ion-label >Denuncia</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="acoso">
+    <ion-label >Acoso</ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+<!-- Number type input -->
+<ion-label >Edad</ion-label>
+<ion-input  size="2" color="success" type="number" value="18" min="17" max="98"></ion-input>
+
+<!-- combobox -->
+<ion-input value="Paso 1: verifica que tus datos sean correctos" readonly></ion-input>
+
+
+  <label>Paso 2 : selecciona la categoria de la dependencia,  organo o institucion</label>
+  <ion-item>
+      <ion-label position="floating">Categoria</ion-label>
+      <ion-select >
+          <ion-select-option value="i">Secretaria</ion-select-option>
+          <ion-select-option value="t">Entidad</ion-select-option>
+          <ion-select-option value="d">Organo Publico</ion-select-option>
+      </ion-select>
+  </ion-item>
+  <ion-item>
+    
+    <ion-label position="floating">Institucion</ion-label>
+    <ion-select  value="brown" okText="Aceptar" cancelText="Cancelar">
+      <ion-select-option value="brown">Secretaría de Movilidad</ion-select-option>
+      <ion-select-option value="blonde">Secretaría de Bienestar del Estado de Oaxaca</ion-select-option>
+      <ion-select-option value="black">Secretaría de Economía</ion-select-option>
+      <ion-select-option value="red">Dirección del Registro Civil</ion-select-option>
+      <ion-select-option value="black">Instituto de la Función Registral del Estado de Oaxaca</ion-select-option>
+      <ion-select-option value="red">Servicios de Agua Potable y Alcantarillado de Oaxaca</ion-select-option>
+      <ion-select-option>Instituto de Acceso a la Información Pública y Protección de Datos Personales</ion-select-option>
+
+    </ion-select>
+  </ion-item>
+<!-- fin del combo-->
+<ion-item>
+  <ion-label position="floating">
+    Description detallada de tu denuncia:
+   </ion-label>
+  <ion-textarea rows="12" placeholder="describe el motivo de tu denuncia..."></ion-textarea>
+</ion-item>
+  </ion-card>
+
+  <ion-card>
+    
+      <ion-text color="success">
+        <sub>
+          <i>
+            Bienvenido ,Realiza tu denuncia 100% anonima sin miedo a represalias
+          </i>
+        </sub>
+      </ion-text>
+
+
+      <ion-label>Adjunta evidencia a tu denuncia para mayor credibilidad</ion-label>
+      <ion-segment (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="camera">
+          <ion-icon name="camera-outline" ></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="video">
+          <ion-icon name="videocam-outline" ></ion-icon>
+        </ion-segment-button>
+      </ion-segment>     
+  
+  </ion-card>
+  <ion-item>
+    <ion-buttons>
+      <ion-button slot="end" size="default" color="success">
+        Enviar  
+        <ion-icon name="mail"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
+ <footer>
+    
+ </footer>
+ 
+      
+ </ion-content>

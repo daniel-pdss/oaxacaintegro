@@ -1,0 +1,16 @@
+ion-menu {
+    --ion-background-color: #02455f ;
+    --ion-text-color: var(--ion-color-primary-contrast);
+    ion-toolbar{
+      text-align: center;
+    }
+    ion-fab-button{
+      //background: gray;
+      --background:#05233b;                                                                                                                                                      
+    --color:#cc099b;
+
+    }
+    ion-icon{
+        color: #29a5df;
+    }
+  }

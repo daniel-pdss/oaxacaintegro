@@ -1,0 +1,78 @@
+<ion-header class="ion-text-center">
+  <ion-toolbar>
+    <ion-label>Dependencias, Órganos Publicos & Entidades</ion-label>
+    <ion-buttons slot="start"><!--boton de retroceso a pagina de inicio al final de la cabezera-->
+      <ion-back-button defaultHref="contacts"></ion-back-button>
+    </ion-buttons>
+    <ion-icon slot="end" src="assets/img/o+i.svg"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card >
+    <ion-card-header>
+      <ion-label>Secretariás</ion-label>
+    </ion-card-header>
+    <ion-grid class="ion-align-items-center">
+      <ion-row class="ion-no-padding" class="ion-align-items-center">
+        <ion-list>
+          <ion-col size="6" class="ion-no-padding">
+            <ion-card  (click)="navigateToFormulario()" class="ion-activated">
+              <img src="assets/img/ico-Dependencias/semovi.jpg" >
+            </ion-card>
+          </ion-col>
+        </ion-list>
+      </ion-row>
+    </ion-grid>
+      
+  </ion-card>
+  <!--cards para cada opcion-->
+<ion-card>
+  <ion-card-header>
+    <ion-label>Organos Autonomos</ion-label>
+  </ion-card-header>
+  
+  <ion-card-content>
+    <ion-row class="ion-no-padding" class="ion-align-items-center">
+        <ion-col class="ion-no-padding">
+            <ion-card  (click)="navigateToFormulario()" class="ion-activated">
+                <img src="assets/img/ico-Dependencias/IAIP.jpg" >
+            </ion-card>
+            <ion-card>
+                <p>otros</p>
+            </ion-card> 
+        </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>
+
+<!--tercer contenido de listas-->
+<ion-card>
+  <ion-card-header>
+    <ion-label>Entidades</ion-label>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-card (click)="navigateToFormulario()" class="ion-activated">
+            <img src="assets/img/ico-Dependencias/registro civil.jpg" alt="">
+          </ion-card>
+        </ion-col>
+          <ion-col size="6">
+            <ion-card (click)="navigateToFormulario()" class="ion-activated"> 
+              <img src="assets/img/ico-Dependencias/SAPAO.png" alt="">
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card (click)="navigateToFormulario()" class="ion-activated">
+              <img src="assets/img/ico-Dependencias/IFREO.png" alt="">
+            </ion-card>
+          </ion-col>
+        
+      </ion-row>
+    </ion-grid>
+   
+  </ion-card-content>
+</ion-card>
+</ion-content>

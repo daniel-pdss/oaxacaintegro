@@ -1,0 +1,25 @@
+ion-segment-button {
+   
+--indicator-box-shadow: transparent!important;
+    border-radius: 2.5rem !important;
+    //padding: 0.7rem;
+    margin: 5;
+    --background:#c6e6ca;                                                                                                                                                      
+    --color:#02ff24;
+    --background-checked: #35fc04!important;
+    --color-checked: #ffffff;
+    --indicator-color : transparent!important; /* this solution */
+}
+.hombre{
+    
+    background: #05263b;
+    --color:#0974cc;
+    --background-checked: #038799!important;
+    --color-checked: #ffffff;
+}
+.mujer{
+    background: #9e06ac;
+    color: #ffffff;
+    --background-checked: #e20e67!important;
+    --color-checked: #ffffff;
+}

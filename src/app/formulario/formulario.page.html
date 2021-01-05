@@ -1,0 +1,438 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Formulario</ion-title>
+    <ion-buttons slot="start"><!--boton de retroceso a pagina de inicio al final de la cabezera-->
+      <ion-back-button defaultHref="depencdencias"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Fecha de evaluacion: </ion-label>
+    <ion-datetime displayFormat="DD MMM, YYYY"  monthShortNames="Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre" display-timezone="utc" ></ion-datetime>
+  </ion-item>
+
+   <ion-card>
+      <ion-card-header>
+        <ion-label>Bateria de Preguntas</ion-label>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Institucion</ion-label>
+          <ion-select  value="brown" okText="Aceptar" cancelText="Cancelar">
+            <ion-select-option value="brown">Secretaría de Movilidad</ion-select-option>
+            <ion-select-option value="blonde">Secretaría de Bienestar del Estado de Oaxaca</ion-select-option>
+            <ion-select-option value="black">Secretaría de Economía</ion-select-option>
+            <ion-select-option value="red">Dirección del Registro Civil</ion-select-option>
+            <ion-select-option value="black">Instituto de la Función Registral del Estado de Oaxaca</ion-select-option>
+            <ion-select-option value="red">Servicios de Agua Potable y Alcantarillado de Oaxaca</ion-select-option>
+            <ion-select-option>Instituto de Acceso a la Información Pública y Protección de Datos Personales</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Otro</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+      </ion-card-content>
+   </ion-card> 
+
+<ion-card>
+  <ion-radio-group>
+    <ion-label>
+      ¿Te han pedido dinero a cambio de realizar un trámite?
+    </ion-label>
+    <ion-item>
+      <ion-label>SI</ion-label>
+      <ion-radio value="cord"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>NO</ion-label>
+      <ion-radio value="duesenberg"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+
+  <ion-radio-group>
+    <ion-label>
+      ¿No han respetado el horario de las citas?
+    </ion-label>
+    <ion-item>
+      <ion-label>SI</ion-label>
+      <ion-radio value="cord"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>NO</ion-label>
+      <ion-radio value="duesenberg"></ion-radio>
+      </ion-item>
+  </ion-radio-group>
+  
+    <ion-radio-group>
+        <ion-label>
+          ¿Hay trabajadores de la Secretaria de Movilidad que parece que no están trabajando?
+        </ion-label>
+      <ion-item>
+        <ion-label>SI</ion-label>
+        <ion-radio value="cord"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>NO</ion-label>
+        <ion-radio value="duesenberg"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+
+    <ion-radio-group>
+      <ion-label>
+        ¿Has notado si alguien que viene a realizar trámites lo pasan directamente sin realizar todo el proceso?  
+      </ion-label>
+    <ion-item>
+      <ion-label>SI</ion-label>
+      <ion-radio value="cord"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>NO</ion-label>
+      <ion-radio value="duesenberg"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+
+  <ion-radio-group>
+    <ion-label>
+      ¿No hay información sobre donde denunciar la corrupción de manera clara y visible?  
+    </ion-label>
+  <ion-item>
+    <ion-label>SI</ion-label>
+    <ion-radio value="cord"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>NO</ion-label>
+    <ion-radio value="duesenberg"></ion-radio>
+  </ion-item>
+</ion-radio-group>
+
+<ion-radio-group>
+  <ion-label>
+    ¿Te han pedido requisitos no establecidos durante el registro del trámite?  
+  </ion-label>
+<ion-item>
+  <ion-label>SI</ion-label>
+  <ion-radio value="cord"></ion-radio>
+</ion-item>
+<ion-item>
+  <ion-label>NO</ion-label>
+  <ion-radio value="duesenberg"></ion-radio>
+</ion-item>
+</ion-radio-group>
+
+<ion-radio-group>
+  <ion-label>
+    ¿Percibe corrupción en esta institución?  
+  </ion-label>
+<ion-item>
+  <ion-label>SI</ion-label>
+  <ion-radio value="cord"></ion-radio>
+</ion-item>
+<ion-item>
+  <ion-label>NO</ion-label>
+  <ion-radio value="duesenberg"></ion-radio>
+</ion-item>
+</ion-radio-group>
+<ion-radio-group>
+  <ion-label>
+    Si tuviera que denunciar actos de corrupción de esta secretaria 
+    ¿No se siente cómodo para revelar una conducta corrupta?
+  </ion-label>
+<ion-item>
+  <ion-label>SI</ion-label>
+  <ion-radio value="cord"></ion-radio>
+</ion-item>
+<ion-item>
+  <ion-label>NO</ion-label>
+  <ion-radio value="duesenberg"></ion-radio>
+</ion-item>
+</ion-radio-group>
+<ion-item > 
+  <ion-button slot="end" expand="full"  fill="clear" size="default" shape="round" class="btnEnviar" >
+    <ion-icon slot="end" name="mail"></ion-icon>
+    Enviar
+  </ion-button>
+</ion-item>
+</ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <p>
+        NOTA
+  En caso de que respondan que SI a la primera pregunta es necesario ampliar con otras
+  preguntas:
+      </p> 
+    </ion-card-header>  
+    <ion-card-content>
+      <ion-item >
+        <ion-label position="floating">
+         1. ¿Cuál fue el propósito de pagar dinero extra o de dar una dádiva?
+        </ion-label>
+        <ion-select  value="c" okText="Aceptar" cancelText="Cancelar">
+            <ion-select-option value="a">
+              a. Acelerar un trámite		
+            </ion-select-option>
+            <ion-select-option value="b">
+                b. Hacer posible la finalización del trámite (que de otro modo no sería posible)		
+            </ion-select-option>
+            <ion-select-option value="c">
+              c. Evitar el pago de una multa
+            </ion-select-option>
+            <ion-select-option value="d">
+              d. Recibir un trato preferencial (por ejemplo, aumentar la calificación, reducir impuestos, aumentar prestaciones, etc.)
+            </ion-select-option>
+            <ion-select-option value="e">
+              e. Recibir información sobre el proceso (a dónde ir, a quién acercarse, etc.)	
+            </ion-select-option>
+            <ion-select-option value="f">
+              f. Fue un signo de agradecimiento por el servicio prestado			
+            </ion-select-option>
+            <ion-select-option value="g">
+              g. Sin algún propósito específico (es mejor mantener buenas relaciones)			
+            </ion-select-option>
+            <ion-select-option value="h">
+              h. No lo sé			
+            </ion-select-option>
+            <ion-select-option value="i">
+              Otro
+            </ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        2. ¿Cómo entendió que se esperaba de usted una dádiva o un pago adicional?
+      </ion-label>
+      <ion-select value="c" okText="Aceptar" cancelText="Cancelar">
+        <ion-select-option value="a">
+          a. Solicitud directa por parte del funcionario					
+        </ion-select-option>
+        <ion-select-option value="b">
+          b. El funcionario solicitó indirectamente un pago			
+        </ion-select-option>
+        <ion-select-option value="c">
+          c. Una tercera persona solicitó el pago adicional			
+        </ion-select-option>
+        <ion-select-option value="d">
+          d. Nadie lo pidió, lo hice para facilitar/acelerar el trámite			
+        </ion-select-option>
+        <ion-select-option value="e">
+          e. No lo sé			
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        3. ¿En qué momento exactamente dio la dádiva/ dinero?
+      </ion-label>
+      <ion-select value="c" okText="Aceptar" cancelText="Cancelar">
+          <ion-select-option value="a">
+            a. Antes de la prestación del servicio			
+          </ion-select-option>
+          <ion-select-option value="b">
+            b. Después de la prestación del servicio			
+          </ion-select-option>
+          <ion-select-option value="c">
+            c. Al mismo tiempo que se prestó el servicio 			
+          </ion-select-option>
+          <ion-select-option value="d">
+            d. En parte antes y en parte después de la prestación del servicio			
+          </ion-select-option>
+          <ion-select-option value="e">
+            e. No lo sé
+          </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        4. ¿A quién se benefició con el trámite?
+      </ion-label>
+      <ion-select value="c" okText="Seleccionar" cancelText="Cancelar">
+          <ion-select-option value="a">
+            a. Razones personales/familiares (por ejemplo, para usted mismo, en nombre de otro miembro del hogar, en nombre de todos los miembros del hogar)			            
+          </ion-select-option>
+          <ion-select-option value="b">
+            b. Razones de trabajo/negocio (como parte de su actividad económica normal o negocio)			
+          </ion-select-option>
+          <ion-select-option value="c">
+            c. Ambos			
+          </ion-select-option>
+          <ion-select-option value="d">
+            d. No lo sé	
+          </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        5. ¿Recibió el servicio para el que fue destinado el soborno?
+      </ion-label>
+      <ion-select value="c" okText="Seleccionar" cancelText="Cancelar">
+          <ion-select-option value="a">
+            a. Sí			
+          </ion-select-option>
+          <ion-select-option value="b">
+            b. No					
+          </ion-select-option>
+          <ion-select-option value="c">
+            c. No lo sé	
+          </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        6. ¿Denunciaría lo ocurrido a alguna autoridad oficial  o a alguna institución no oficial?
+      </ion-label>
+      <ion-select value="c" okText="Seleccionar" cancelText="Cancelar">
+        <ion-select-option value="a">
+          a. Sí			
+        </ion-select-option>
+        <ion-select-option value="b">
+          b. No					
+        </ion-select-option>
+        <ion-select-option value="c">
+          c. No lo sé	
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        7. ¿A qué autoridad lo denunciaría usted?
+      </ion-label>
+      <ion-select value="c" okText="Seleccionar" cancelText="Cancelar">
+          <ion-select-option value="a">
+            a. Organismo anticorrupción			
+          </ion-select-option>
+          <ion-select-option value="b">
+            b. Organismo/institución del funcionario que solicita el soborno			
+          </ion-select-option>
+          <ion-select-option value="c">
+            c. Otra institución			
+          </ion-select-option>
+          <ion-select-option value="d">
+            d. Prensa			
+          </ion-select-option>
+          <ion-select-option value="e">
+            e. Organización internacional			
+          </ion-select-option>
+          <ion-select-option value="f">
+            f. Organización no gubernamental			
+          </ion-select-option>
+          <ion-select-option value="g">
+            g. No lo sé			
+          </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        8. ¿Ha denunciado anteriormente un incidente de soborno de la Secretaria de Movilidad?
+      </ion-label>
+      <ion-select value="c" okText="Seleccionar" cancelText="Cancelar">
+        <ion-select-option value="a">
+          a. Sí			
+        </ion-select-option>
+        <ion-select-option value="b">
+          b. No					
+        </ion-select-option>
+        <ion-select-option value="c">
+          c. No lo sé	
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        9. ¿Qué pasó después de que usted denunció el incidente de soborno?
+      </ion-label>
+      <ion-select value="c" okText="Seleccionar" cancelText="Cancelar">
+          <ion-select-option value="a">
+            a. Se inició un procedimiento formal contra el funcionario			          
+          </ion-select-option>
+          <ion-select-option value="a">
+            b. El problema se resolvió de manera informal y me devolvieron el dinero/dádiva			
+          </ion-select-option>
+          <ion-select-option value="b">
+            c. Me aconsejaron no continuar con mi denuncia 			
+          </ion-select-option>
+          <ion-select-option value="b">
+            d. No hubo seguimiento de mi denuncia					
+          </ion-select-option>
+          <ion-select-option value="c">
+            e. Sufrí consecuencias negativas en relación con la denuncia del incidente			
+          </ion-select-option>
+          <ion-select-option value="d">
+            f. Otro	
+          </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        10. ¿Estuvo satisfecho con el trabajo realizado por la autoridad a la que denunció el incidente?
+      </ion-label>
+      <ion-select value="c" okText="Seleccionar" cancelText="Cancelar">
+        <ion-select-option value="a">
+          a. Si
+        </ion-select-option>
+        <ion-select-option value="b">
+          b. No
+        </ion-select-option>
+        <ion-select-option value="c">
+          c. No lo se
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        11. (En caso de no haberlo hecho) ¿Por qué no lo denunció?
+      </ion-label>
+      <ion-select value="c" okText="Seleccionar" cancelText="Cancelar">
+        <ion-select-option value="a">
+          a. Es una práctica común pagar o dar dádivas, ¿por qué debería denunciarlo?			
+        </ion-select-option>
+        <ion-select-option value="b">
+          b. Es inútil, a nadie le va a importar			
+        </ion-select-option>
+        <ion-select-option value="c">
+          c. No sé a quién debería denunciarlo			
+        </ion-select-option>
+        <ion-select-option value="d">
+          d. Sé a quién denunciarlo, pero está muy lejos			
+        </ion-select-option>
+        <ion-select-option value="e">
+          e. Miedo a las consecuencias negativas para mi 			
+        </ion-select-option>
+        <ion-select-option value="f">
+          f. No lo denuncié porque recibí un beneficio por el pago/dádiva			
+        </ion-select-option>
+        <ion-select-option value="g">
+          g. No lo denuncié porque hice el pago/dádiva como señal de gratitud			 
+        </ion-select-option>
+        <ion-select-option value="h">
+          h. No lo denuncié porque no quería incurrir en gastos adicionales			
+        </ion-select-option>
+        <ion-select-option value="i">
+          i. Otra razón			
+        </ion-select-option>
+        <ion-select-option value="j">
+          j. No lo sé			
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    </ion-card-content> 
+    <ion-item > 
+      <ion-button slot="end" expand="full"  fill="clear" size="default" shape="round" class="btnEnviar" >
+        <ion-icon slot="end" name="mail"></ion-icon>
+        Enviar
+      </ion-button>
+    </ion-item>  
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-item>
+      <img src="assets/img/logo-oaxaca.png">
+    </ion-item> 
+  </ion-toolbar>
+</ion-footer>

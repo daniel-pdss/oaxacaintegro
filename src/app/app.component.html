@@ -1,0 +1,76 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content">
+      <ion-header>
+        <img src="assets/img/2.png"/>
+        <ion-toolbar>
+          <ion-label>Menu</ion-label>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle auto-hide="false">
+            <!-- inicio del menu desplegable (SIDEMENU)
+              Opciones:
+              "Inicio"--Mensaje de Informacion
+            -->
+            <ion-item [routerDirection]="'root'" [routerLink]="'/home'">
+              <ion-icon slot="start" [name]="'home'"></ion-icon>
+              <ion-label>
+                Inicio
+              </ion-label>
+            </ion-item>
+            <!-- 
+              "corruptometro""--- Pagina multiopcion de acciones 
+                --Realizar denuncia expres
+                --Listado de Organos & Dependencias 
+                --Autoevaluacion Ciudadana
+            -->
+            <ion-item [routerDirection]="'root'" [routerLink]="'/contacts'">
+              <ion-icon slot="start" [name]="'list'"></ion-icon>
+              <ion-label>
+                Corruptometro
+              </ion-label>
+            </ion-item>
+            <ion-item [routerDirection]="'root'" [routerLink]="'/pruebas'">
+              <ion-icon slot="start" [name]="'list'"></ion-icon>
+              <ion-label>
+                pruebas
+              </ion-label>
+            </ion-item>
+            
+            
+          </ion-menu-toggle>
+        </ion-list>
+
+        <ion-content>
+           <!-- 
+             boton desplegable de "Contacto" en redes sociales
+              --twiter
+              --facebook
+              --whatsApp
+            -->
+            <ion-fab horizontal="center" slot="fixed">
+              <ion-fab-button>
+                <ion-icon name="share" color=""></ion-icon>
+              </ion-fab-button>
+              <ion-fab-list side="bottom">
+                <ion-fab-button><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+              </ion-fab-list>
+              <ion-fab-list side="start">
+                <ion-fab-button><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+              </ion-fab-list>
+              <ion-fab-list side="end">
+                <ion-fab-button><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+              </ion-fab-list>
+            </ion-fab>
+                  
+        </ion-content>
+
+      </ion-content>
+ 
+    </ion-menu> 
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

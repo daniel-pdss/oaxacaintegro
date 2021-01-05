@@ -1,0 +1,38 @@
+
+<ion-app>
+  <ion-header>
+    <ion-toolbar color="success">
+      <ion-title>Ionic 4 Segment</ion-title>
+      <ion-buttons slot="end"><!--boton de retroceso a pagina de inicio al final de la cabezera-->
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-card ion-item *ngFor="let item of lista">
+      
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="6" class="ion-align-items-center">
+              <img src="{{item.logo}}" alt="">
+          </ion-col>
+          <ion-col size="6">
+            <h6>Titular Responsable</h6>
+            <h3>{{item.titular}}</h3>
+            <h6>Contacto</h6>
+            <h3>{{item.contacto}}</h3>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+    <ion-card>
+    
+      <ion-segment [(ngModel)]="eating">
+        <ion-segment-button *ngFor="let fruit of fruits">{{fruit}}</ion-segment-button>
+      </ion-segment>
+    </ion-card>
+    
+  </ion-content>
+  
+</ion-app>
