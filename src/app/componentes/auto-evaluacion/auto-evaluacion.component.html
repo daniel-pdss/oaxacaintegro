@@ -1,0 +1,230 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Auto Evaluacion</ion-title>
+    <ion-buttons slot="start" fill="clear" (click)="closeForm()">
+      <!--boton de retroceso a pagina de inicio al final de la cabezera-->
+      <ion-icon name="close"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-label>Bateria de Preguntas</ion-label>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Nombre: </ion-label>
+        <ion-input [(ngModel)]="autoevaluacion.nombre"  placeholder=" @ejemplo: juan"></ion-input>
+      </ion-item>
+      <ion-list>
+        <ion-radio-group>
+          <ion-list-header>
+            <ion-label>
+              ¿Te has saltado la fila?
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-segment [(ngModel)]="autoevaluacion.Reacti1" name="Reacti1" color="primary">
+              <ion-segment-button value="10">
+                <ion-label>Si</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="0">
+                <ion-label>No</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-item>
+        </ion-radio-group>
+         <!--separador de preguntas-->
+        <ion-radio-group>
+          <ion-list-header>
+            <ion-label>
+              ¿No has pagado por algo que has tomado?
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-segment [(ngModel)]="autoevaluacion.Reacti2" name="Reacti2" color="primary">
+              <ion-segment-button value="10">
+                <ion-label>Si</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="0">
+                <ion-label>No</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-item>
+        </ion-radio-group>
+        <!--separador de preguntas-->
+        <ion-radio-group>
+          <ion-list-header>
+            <ion-label>
+              ¿No has devuelto algo que te encontraste y no es tuyo?
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-segment [(ngModel)]="autoevaluacion.Reacti3" name="Reacti3" color="primary">
+              <ion-segment-button value="10">
+                <ion-label>Si</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="0">
+                <ion-label>No</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-item>
+        </ion-radio-group>
+         <!--separador de preguntas-->
+         <ion-radio-group>
+          <ion-list-header>
+            <ion-label>
+              ¿Has mentido sobre el valor real de algo que vendes?
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-segment [(ngModel)]="autoevaluacion.Reacti4" name="Reacti4" color="primary">
+              <ion-segment-button value="10">
+                <ion-label>Si</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="0">
+                <ion-label>No</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-item>
+        </ion-radio-group>
+         <!--separador de preguntas-->
+         <ion-radio-group>
+          <ion-list-header>
+            <ion-label>
+              ¿No has pagado todos tus impuestos?
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-segment [(ngModel)]="autoevaluacion.Reacti5" name="Reacti5" color="primary">
+              <ion-segment-button value="10">
+                <ion-label>Si</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="0">
+                <ion-label>No</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-item>
+        </ion-radio-group>
+         <!--separador de preguntas-->
+         <ion-radio-group>
+          <ion-list-header>
+            <ion-label>
+              ¿Has mentido para obtener subsidios o programas de gobierno?
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-segment [(ngModel)]="autoevaluacion.Reacti6" name="Reacti6" color="primary">
+              <ion-segment-button value="10">
+                <ion-label>Si</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="0">
+                <ion-label>No</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-item>
+        </ion-radio-group>
+         <!--separador de preguntas--><ion-radio-group>
+          <ion-list-header>
+            <ion-label>
+              ¿Has fingido alguna enfermedad o emergencia familiar para no cumplir un compromiso?
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-segment [(ngModel)]="autoevaluacion.Reacti7" name="Reacti7" color="primary">
+              <ion-segment-button value="10">
+                <ion-label>Si</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="0">
+                <ion-label>No</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-item>
+        </ion-radio-group>
+         <!--separador de preguntas-->
+         <ion-radio-group>
+          <ion-list-header>
+            <ion-label>
+              ¿No has pagado tus deudas?
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-segment [(ngModel)]="autoevaluacion.Reacti8" name="Reacti8" color="primary">
+              <ion-segment-button value="10">
+                <ion-label>Si</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="0">
+                <ion-label>No</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-item>
+        </ion-radio-group>
+         <!--separador de preguntas-->
+         <ion-radio-group>
+          <ion-list-header>
+            <ion-label>
+              ¿Has tirado la basura en la calle?
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-segment [(ngModel)]="autoevaluacion.Reacti9" name="Reacti9" color="primary">
+              <ion-segment-button value="10">
+                <ion-label>Si</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="0">
+                <ion-label>No</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-item>
+        </ion-radio-group>
+         <!--separador de preguntas-->
+         <ion-radio-group>
+          <ion-list-header>
+            <ion-label>
+              ¿Has dañado un objeto sin querer y has huido sin pagarlo?
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-segment [(ngModel)]="autoevaluacion.Reacti10" name="Reacti10" color="primary">
+              <ion-segment-button value="10">
+                <ion-label>Si</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="0">
+                <ion-label>No</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-item>
+        </ion-radio-group>
+         <!--separador de preguntas-->
+         <ion-radio-group>
+          <ion-list-header>
+            <ion-label>
+              ¿Te has hecho el occiso, cuando te devuelven cambio de más?
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-segment [(ngModel)]="autoevaluacion.Reacti11" name="Reacti11" color="primary">
+              <ion-segment-button value="10">
+                <ion-label>Si</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="0">
+                <ion-label>No</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-item>
+          
+        </ion-radio-group>
+         <!--separador de preguntas-->
+      </ion-list>
+      <ion-buttons>
+        <ion-button slot="end" class="cpc" (click)="alerta()">
+          Enviar
+        </ion-button>
+      </ion-buttons>
+    </ion-card-content>
+ </ion-card>
+
+
+</ion-content>

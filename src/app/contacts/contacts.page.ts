@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { ModalController } from '@ionic/angular';
+import { AutoEvaluacionComponent } from '../componentes/auto-evaluacion/auto-evaluacion.component';
 
 
 @Component({
@@ -11,7 +12,8 @@ import { Router } from '@angular/router';
 
 export class ContactsPage {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router,
+    private modal: ModalController) {}
 
   navigateToDepencdencias(){
     this.router.navigate(['/depencdencias']);
@@ -22,7 +24,12 @@ export class ContactsPage {
   }
 
   navigateToAutoevaluacion(){
-    this.router.navigate(['/autoevaluacion']);
+    this.modal.create({
+      component: AutoEvaluacionComponent,
+      componentProps:{
+        
+      }
+    }).then((modal)=> modal.present())
   }
 
 }
