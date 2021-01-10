@@ -1,38 +1,125 @@
+<ion-header class="ion-text-center">
+  <ion-toolbar>
+    <ion-label>Dependencias, Órganos Publicos & Entidades</ion-label>
+    <ion-buttons slot="start">
+      <!--boton de retroceso a pagina de inicio al final de la cabezera-->
+      <ion-back-button defaultHref="contacts"></ion-back-button>
+    </ion-buttons>
+    <ion-icon slot="end" src="assets/img/o+i.svg"></ion-icon>
+  </ion-toolbar>
+</ion-header>
 
-<ion-app>
-  <ion-header>
-    <ion-toolbar color="success">
-      <ion-title>Ionic 4 Segment</ion-title>
-      <ion-buttons slot="end"><!--boton de retroceso a pagina de inicio al final de la cabezera-->
-        <ion-back-button defaultHref="home"></ion-back-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-label>Secretariás</ion-label>
+    </ion-card-header>
+    <ion-grid class="ion-align-items-center">
+      <ion-row class="ion-no-padding" class="ion-align-items-center">
+        <ion-row *ngIf="SEBIEN!=null">
+          <ion-list *ngFor="let secretaria of SEBIEN">
+            <ion-col size="6" class="ion-no-padding">
+              <ion-item>
+                {{secretaria.total}}
+                {{secretaria.nombre}}
+              </ion-item>
+              <ion-progress-bar color="primary" [value]="secretaria.total"></ion-progress-bar>
+            </ion-col>
+          </ion-list>
+        </ion-row>
+        <ion-row *ngIf="SE!=null">
+          <ion-list *ngFor="let secretaria of SE">
+            <ion-col size="6" class="ion-no-padding">
+              <ion-item>
+                {{secretaria.total}}
+                {{secretaria.nombre}}
+              </ion-item>
+              <ion-progress-bar color="primary" [value]="secretaria.total"></ion-progress-bar>
+            </ion-col>
+          </ion-list>
+        </ion-row>
+        <ion-row *ngIf="SEMOVIL!=null">
+          <ion-list *ngFor="let secretaria of SEMOVIL">
+            <ion-col size="6" class="ion-no-padding">
+              <ion-item>
+                {{secretaria.total}}
+                {{secretaria.nombre}}
+              </ion-item>
+              <ion-progress-bar color="primary" [value]="secretaria.total"></ion-progress-bar>
+            </ion-col>
+          </ion-list>
+        </ion-row>
+      </ion-row>
+    </ion-grid>
 
-  <ion-content>
-    <ion-card ion-item *ngFor="let item of lista">
-      
-      <ion-grid>
-        <ion-row class="ion-align-items-center">
-          <ion-col size="6" class="ion-align-items-center">
-              <img src="{{item.logo}}" alt="">
-          </ion-col>
-          <ion-col size="6">
-            <h6>Titular Responsable</h6>
-            <h3>{{item.titular}}</h3>
-            <h6>Contacto</h6>
-            <h3>{{item.contacto}}</h3>
-          </ion-col>
+  </ion-card>
+  <!--cards para cada opcion-->
+  <ion-card>
+    <ion-card-header>
+      <ion-label>Organos Autonomos</ion-label>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-grid class="ion-align-items-center">
+        <ion-row class="ion-no-padding" class="ion-align-items-center" *ngIf="IAIP!=null">
+          <ion-list *ngFor="let secretaria of IAIP">
+            <ion-col size="6" class="ion-no-padding">
+              <ion-item>
+                {{secretaria.total}}
+                {{secretaria.nombre}}
+              </ion-item>
+              <ion-progress-bar color="primary" [value]="secretaria.total"></ion-progress-bar>
+            </ion-col>
+          </ion-list>
         </ion-row>
       </ion-grid>
-    </ion-card>
-    <ion-card>
-    
-      <ion-segment [(ngModel)]="eating">
-        <ion-segment-button *ngFor="let fruit of fruits">{{fruit}}</ion-segment-button>
-      </ion-segment>
-    </ion-card>
-    
-  </ion-content>
-  
-</ion-app>
+    </ion-card-content>
+  </ion-card>
+
+  <!--tercer contenido de listas-->
+  <ion-card>
+    <ion-card-header>
+      <ion-label>Entidades</ion-label>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid class="ion-align-items-center">
+        <ion-row class="ion-no-padding" class="ion-align-items-center">
+          <ion-row *ngIf="CIVIL!=null">
+            <ion-list *ngFor="let secretaria of CIVIL">
+              <ion-col size="6" class="ion-no-padding">
+                <ion-item>
+                  {{secretaria.total}}
+                  {{secretaria.nombre}}
+                </ion-item>
+                <ion-progress-bar color="primary" [value]="secretaria.total"></ion-progress-bar>
+              </ion-col>
+            </ion-list>
+          </ion-row>
+          <ion-row *ngIf="IFREO!=null">
+            <ion-list *ngFor="let secretaria of IFREO">
+              <ion-col size="6" class="ion-no-padding">
+                <ion-item>
+                  {{secretaria.total}}
+                  {{secretaria.nombre}}
+                </ion-item>
+                <ion-progress-bar color="primary" [value]="secretaria.total"></ion-progress-bar>
+              </ion-col>
+            </ion-list>
+          </ion-row>
+          <ion-row *ngIf="SAPAO!=null">
+            <ion-list *ngFor="let secretaria of SAPAO">
+              <ion-col size="6" class="ion-no-padding">
+                <ion-item>
+                  {{secretaria.total}}
+                  {{secretaria.nombre}}
+                </ion-item>
+                <ion-progress-bar color="primary" [value]="secretaria.total"></ion-progress-bar>
+              </ion-col>
+            </ion-list>
+          </ion-row>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

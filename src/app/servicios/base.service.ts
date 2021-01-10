@@ -27,6 +27,15 @@ export class BaseService {
      })
    }))
   }
+  getDemandas(id){
+    return this.db.collection('oaxacaintegro').doc(id).collection('Denuncias').snapshotChanges().pipe(map(rooms => {
+      return rooms.map(a =>{
+        const data = a.payload.doc.data() ;
+        data.id = a.payload.doc.id;
+        return data;
+      })
+    }))
+   }
 
   EnviarForm(form: formulario,id: string ){    
     this.db.collection('oaxacaintegro').doc(id).collection('Denuncias').add({          

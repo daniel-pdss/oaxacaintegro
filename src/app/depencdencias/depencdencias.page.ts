@@ -24,6 +24,7 @@ export class DepencdenciasPage implements OnInit {
     this.baseService.getInstituciones().subscribe( institucion => {
       this.institucionArray = institucion;
       this.array(this.institucionArray);
+      console.log(this.institucionArray);
     });
   }
 
