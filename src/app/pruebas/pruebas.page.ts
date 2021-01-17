@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { BaseService, InterfaceInstitucion } from '../servicios/base.service';
 import { DenunciasComponent } from '../componentes/denuncias/denuncias.component';
+import { ActivatedRoute } from '@angular/router';
+import { ListasService } from '../servicios/listas.service';
 @Component({
   selector: 'app-pruebas',
   templateUrl: './pruebas.page.html',
@@ -10,45 +12,32 @@ import { DenunciasComponent } from '../componentes/denuncias/denuncias.component
 export class PruebasPage implements OnInit {
 
   constructor(
-    private baseService: BaseService
-  ) { }
+    private baseService: BaseService,
+    private routerData: ActivatedRoute,
+    private listaService: ListasService
+  ) {}
   boolena = false;
   secretarias: any = [];
   organos: any = [];
   entidades: any = [];
   institucionArray: any = [];
-  demanda: any = [];
+
   a = {}
   ngOnInit() {
-    this.baseService.getInstituciones().subscribe(institucion => {
-      this.institucionArray = institucion;
-      this.Documentos(this.institucionArray);
-    })
-
-  }
-  Documentos(instituciones) {
-    for (let item of instituciones) {
-      if (item.id !== 'AutoEvaluaciones' && item.id !== 'DenunciaExprex') {
-        this.baseService.getDemandas(item.id).subscribe(demandas => {
-          for (let iterator of demandas) {
-            this.Valores(iterator.id, item.institucion, item.tipo);
-            this.onClick()
-          }
-        });
+    this.listaService.$getObjectSource.subscribe(
+      data => 
+      {this.institucionArray=data
+        this.RellenarAreglos();
+        this.SumarValores();
+        this.ValoresFinal();
+        this.CrearBarra();
+      
       }
-      else { }
+      
+    )
 
-    }
   }
-  Valores(id, nombre, tipo) {
-    this.a = {
-      id: id,
-      nombre: nombre,
-      tipo: tipo
-    }
-    this.demanda.push(this.a);
-    // console.log(this.demanda);
-  }
+
   SEBIEN = [{
     nombre: null,
     tipo: null,
@@ -113,28 +102,20 @@ export class PruebasPage implements OnInit {
   }
   sumas = 0
   CrearBarra() {
-    this.SEBIEN[0].total = (this.SEBIEN[0].total * 100 / this.demanda.length) / 100
-    this.SE[0].total = (this.SE[0].total * 100 / this.demanda.length) / 100
-    this.SEMOVIL[0].total = (this.SEMOVIL[0].total * 100 / this.demanda.length) / 100
-    this.IFREO[0].total = (this.IFREO[0].total * 100 / this.demanda.length) / 100
-    this.CIVIL[0].total = (this.CIVIL[0].total * 100 / this.demanda.length) / 100
-    this.SAPAO[0].total = (this.SAPAO[0].total * 100 / this.demanda.length) / 100
-    this.IAIP[0].total = (this.IAIP[0].total * 100 / this.demanda.length) / 100
-  }
-  onClick2() {
-    console.log(this.sumas)
+    console.log(this.SEBIEN[0].total)
 
+    this.SEBIEN[0].total = (this.SEBIEN[0].total * 100 / this.institucionArray.length) 
+    this.SE[0].total = (this.SE[0].total * 100 / this.institucionArray.length) 
+    this.SEMOVIL[0].total = (this.SEMOVIL[0].total * 100 / this.institucionArray.length) 
+    this.IFREO[0].total = (this.IFREO[0].total * 100 / this.institucionArray.length) 
+    this.CIVIL[0].total = (this.CIVIL[0].total * 100 / this.institucionArray.length) 
+    this.SAPAO[0].total = (this.SAPAO[0].total * 100 / this.institucionArray.length) 
+    this.IAIP[0].total = (this.IAIP[0].total * 100 / this.institucionArray.length) 
+  }
 
-  }
-  onClick() {
-    this.RellenarAreglos();
-    this.SumarValores();
-    this.ValoresFinal();
-    this.CrearBarra();
-  }
 
   RellenarAreglos() {
-    for (let file of this.demanda) {
+    for (let file of this.institucionArray) {
       if (file.tipo == "secretaria") {
         this.secretarias.push(file);
       }

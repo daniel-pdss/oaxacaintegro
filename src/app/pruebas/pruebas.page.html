@@ -20,10 +20,10 @@
           <ion-list *ngFor="let secretaria of SEBIEN">
             <ion-col size="6" class="ion-no-padding">
               <ion-item>
-                {{secretaria.total}}
-                {{secretaria.nombre}}
+                El {{secretaria.total}}% de las demandas son de:              
+                Secretaría de Bienestar del Estado de Oaxaca
               </ion-item>
-              <ion-progress-bar color="primary" [value]="secretaria.total"></ion-progress-bar>
+              <progress color="primary" max="100" [value]="secretaria.total" ></progress>
             </ion-col>
           </ion-list>
         </ion-row>
@@ -31,10 +31,10 @@
           <ion-list *ngFor="let secretaria of SE">
             <ion-col size="6" class="ion-no-padding">
               <ion-item>
-                {{secretaria.total}}
-                {{secretaria.nombre}}
+                El {{secretaria.total}}% de las demandas son de:              
+                Secretaría de Economía
               </ion-item>
-              <ion-progress-bar color="primary" [value]="secretaria.total"></ion-progress-bar>
+              <progress color="primary" max="100" [value]="secretaria.total" ></progress>
             </ion-col>
           </ion-list>
         </ion-row>
@@ -42,10 +42,10 @@
           <ion-list *ngFor="let secretaria of SEMOVIL">
             <ion-col size="6" class="ion-no-padding">
               <ion-item>
-                {{secretaria.total}}
-                {{secretaria.nombre}}
+                El {{secretaria.total}}% de las demandas son de:              
+                Secretaría de Movilidad
               </ion-item>
-              <ion-progress-bar color="primary" [value]="secretaria.total"></ion-progress-bar>
+              <progress color="primary" max="100" [value]="secretaria.total" ></progress>
             </ion-col>
           </ion-list>
         </ion-row>
@@ -65,10 +65,10 @@
           <ion-list *ngFor="let secretaria of IAIP">
             <ion-col size="6" class="ion-no-padding">
               <ion-item>
-                {{secretaria.total}}
-                {{secretaria.nombre}}
+                El {{secretaria.total}}% de las demandas son de:              
+                Instituto de Acceso a la Información Pública y Protección de Datos Personales
               </ion-item>
-              <ion-progress-bar color="primary" [value]="secretaria.total"></ion-progress-bar>
+              <progress color="primary" max="100" [value]="secretaria.total" ></progress>
             </ion-col>
           </ion-list>
         </ion-row>
@@ -88,10 +88,10 @@
             <ion-list *ngFor="let secretaria of CIVIL">
               <ion-col size="6" class="ion-no-padding">
                 <ion-item>
-                  {{secretaria.total}}
-                  {{secretaria.nombre}}
+                   El {{secretaria.total}}% de las demandas son de: 
+                   Dirección del Registro Civil
                 </ion-item>
-                <ion-progress-bar color="primary" [value]="secretaria.total"></ion-progress-bar>
+                <progress color="primary" max="100" [value]="secretaria.total" ></progress>
               </ion-col>
             </ion-list>
           </ion-row>
@@ -99,10 +99,10 @@
             <ion-list *ngFor="let secretaria of IFREO">
               <ion-col size="6" class="ion-no-padding">
                 <ion-item>
-                  {{secretaria.total}}
-                  {{secretaria.nombre}}
+                   El {{secretaria.total}}% de las demandas son de: 
+                   Instituto de la Función Registral del Estado de Oaxaca
                 </ion-item>
-                <ion-progress-bar color="primary" [value]="secretaria.total"></ion-progress-bar>
+                <progress color="primary" max="100" [value]="secretaria.total" ></progress>
               </ion-col>
             </ion-list>
           </ion-row>
@@ -110,10 +110,10 @@
             <ion-list *ngFor="let secretaria of SAPAO">
               <ion-col size="6" class="ion-no-padding">
                 <ion-item>
-                  {{secretaria.total}}
-                  {{secretaria.nombre}}
+                   El {{secretaria.total}}% de las demandas son de: 
+                   Servicios de Agua Potable y Alcantarillado de Oaxaca
                 </ion-item>
-                <ion-progress-bar color="primary" [value]="secretaria.total"></ion-progress-bar>
+                <progress color="primary" max="100" [value]="secretaria.total" ></progress>
               </ion-col>
             </ion-list>
           </ion-row>
